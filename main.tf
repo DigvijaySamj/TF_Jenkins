@@ -12,7 +12,7 @@ resource "aws_vpc" "terraform_vpc" {
 }
 
 resource "aws_instance" "terraform-instance-1" {
-  ami                    = "ami-0c4596ce1e7ae3e68"
+  ami                    = "ami-04b70fa74e45c3917"
   instance_type          = "t2.micro"
   key_name               = "us-east-1e"
   tags = {
@@ -24,7 +24,7 @@ resource "aws_instance" "terraform-instance-1" {
 }
 
  resource "aws_instance" "demo-tf-instance" {
-   ami = "ami-0bb84b8ffd87024d8"
+   ami = "ami-04b70fa74e45c3917"
    instance_type = "t2.medium"
    key_name = "jenkins"
    tags = {
