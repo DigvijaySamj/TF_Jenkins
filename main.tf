@@ -13,7 +13,7 @@ resource "aws_vpc" "terraform_vpc" {
 
 resource "aws_instance" "terraform-instance-1" {
   ami                    = "ami-04b70fa74e45c3917"
-  instance_type          = "t2.micro"
+  instance_type          = "t2.medium"
   key_name               = "us-east-1e"
   tags = {
     Name  = "my-ec2-instance"
@@ -23,16 +23,6 @@ resource "aws_instance" "terraform-instance-1" {
   availability_zone = "us-east-1e"
 }
 
- resource "aws_instance" "demo-tf-instance" {
-   ami = "ami-04b70fa74e45c3917"
-   instance_type = "t2.medium"
-   key_name = "jenkins"
-   tags = {
-     Name = "my-ec2-instance-1"
- 	appid = "345"
- 	env = "dev"
-   }
-   availability_zone = "us-east-1e"
- }
+
 
 
