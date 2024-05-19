@@ -35,11 +35,4 @@ resource "aws_instance" "terraform-instance-1" {
    availability_zone = "us-east-1e"
  }
 
-resource "aws_s3_bucket" "demo-s3-bucket" {
-  bucket = "tf-test-bucket"
 
-  tags = {
-    Name        = "My bucket"
-    Environment = "Dev"
-  }
-}
