@@ -14,13 +14,13 @@ resource "aws_vpc" "terraform_vpc" {
 resource "aws_instance" "terraform-instance-1" {
   ami                    = "ami-04b70fa74e45c3917"
   instance_type          = "t2.medium"
-  key_name               = "us-east-1e"
+  availability_zone = "us-east-1e"
   tags = {
     Name  = "my-ec2-instance"
     appid = "terraform"
     env   = "dev"
   }
-  availability_zone = "us-east-1e"
+
 }
 
 
